@@ -5,9 +5,9 @@
     <Description>Track a UPS package</Description>
     <InputEncoding>UTF-8</InputEncoding>
     <Image width="16" height="16" type="image/x-icon">http://wwwapps.ups.com/favicon.ico</Image>
-    <Url type="text/html" method="POST" template="http://wwwapps.ups.com/WebTracking/track">
-        <Param name="trackNums" value="{searchTerms}"/>
-        <Param name="track.x" value="track"/>
+    <Url type="text/html" method="GET" template="https://wwwapps.ups.com/WebTracking/processInputRequest">
+        <Param name="InquiryNumber1" value="{searchTerms}"/>
+        <Param name="TypeOfInquiryNumber" value="T%255C"/>
     </Url>
     <moz:SearchForm>http://www.ups.com/content/us/en/index.jsx</moz:SearchForm>
     <Developer>WBT</Developer>
